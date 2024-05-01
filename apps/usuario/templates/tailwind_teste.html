@@ -1,0 +1,40 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Teste Tailwind CSS</title>
+    <!-- Carregar Tailwind CSS -->  
+    {% tailwind_css %}
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-4">Teste de Tailwind CSS</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <h2 class="text-xl font-semibold mb-2">Item 1</h2>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur
+                    justo ut
+                    arcu facilisis ultricies.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <h2 class="text-xl font-semibold mb-2">Item 2</h2>
+                <p class="text-gray-600">Nullam ullamcorper, leo vitae cursus vestibulum, neque felis placerat
+                    sapien,
+                    vel sollicitudin purus quam non tortor.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <h2 class="text-xl font-semibold mb-2">Item 3</h2>
+                <p class="text-gray-600">Suspendisse fermentum ligula a est tempus, sed pharetra est finibus.
+                    Nullam
+                    dictum magna in tellus sollicitudin, nec cursus magna vulputate.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

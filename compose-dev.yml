@@ -1,0 +1,26 @@
+version: '3.6'
+
+services:
+  django_db:
+    image: postgres:latest
+    container_name: django_db
+    restart: always
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    volumes:
+      - django_db:/var/lib/postgresql/data
+
+  django_app:
+    image: fabiodesousaleal/django-doc:1.0.1
+    container_name: django_app
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    #environment:
+    #  - SECRET_KEY=django-insecure-aljsj)(#%_$8k2=81a-=3fzg9j873+i0^4rnn-6b3fqu$0q$i3
+
+volumes:
+  django_db:
